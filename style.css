@@ -40,17 +40,20 @@ header {
   border-bottom: 2px solid var(--cinza-claro);
   z-index: 100;
 }
+
 .header-interno {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
 }
+
 .logo {
   font-size: 26px;
   color: var(--asfalto);
   letter-spacing: 1px;
 }
+
 .logo span { color: var(--vermelho); }
 
 nav a {
@@ -60,6 +63,7 @@ nav a {
   margin-left: 22px;
   font-size: 15px;
 }
+
 nav a:hover { color: var(--vermelho); }
 
 .btn-menu {
@@ -83,12 +87,14 @@ nav a:hover { color: var(--vermelho); }
   border: 2px solid transparent;
   transition: transform .15s;
 }
+
 .botao:hover { transform: translateY(-2px); }
 
 .botao-vermelho {
   background: var(--vermelho);
   color: var(--branco);
 }
+
 .botao-contorno {
   background: transparent;
   color: var(--branco);
@@ -101,6 +107,7 @@ nav a:hover { color: var(--vermelho); }
   text-align: center;
   padding: 90px 24px 70px;
 }
+
 .eyebrow {
   color: var(--amarelo);
   font-weight: 700;
@@ -108,27 +115,21 @@ nav a:hover { color: var(--vermelho); }
   font-size: 13px;
   margin-bottom: 18px;
 }
+
 .hero h1 {
   font-size: 44px;
   margin-bottom: 8px;
 }
+
 .hero h1 .destaque { color: var(--amarelo); }
 
 .faixa-estrada {
   height: 6px;
   width: 220px;
   margin: 22px auto 26px;
-  background: repeating-linear-gradient(
-    to right,
-    var(--amarelo) 0 28px,
-    transparent 28px 50px
-  );
+  background: var(--amarelo);
   background-size: 50px 100%;
   animation: andar 1.2s linear infinite;
-}
-@keyframes andar {
-  from { background-position: 0 0; }
-  to   { background-position: -50px 0; }
 }
 
 .hero p {
@@ -137,6 +138,7 @@ nav a:hover { color: var(--vermelho); }
   font-size: 18px;
   color: #E5E5E5;
 }
+
 .hero .botao { margin: 6px; }
 
 section { padding: 70px 0; }
@@ -148,6 +150,7 @@ section { padding: 70px 0; }
   font-size: 13px;
   text-transform: uppercase;
 }
+
 section h2 {
   font-size: 30px;
   margin: 6px 0 18px;
@@ -163,6 +166,7 @@ section h2 {
   margin: 20px 0 30px;
   flex-wrap: wrap;
 }
+
 .aba-botao {
   padding: 12px 22px;
   border: 2px solid var(--asfalto);
@@ -173,6 +177,7 @@ section h2 {
   font-family: 'Barlow', sans-serif;
   font-size: 15px;
 }
+
 .aba-botao.ativa {
   background: var(--vermelho);
   border-color: var(--vermelho);
@@ -183,6 +188,7 @@ section h2 {
 .aba-conteudo.mostrar { display: block; }
 
 .passos { list-style: none; display: grid; gap: 16px; }
+
 .passos li {
   background: var(--cinza-claro);
   border-left: 5px solid var(--amarelo);
@@ -190,28 +196,33 @@ section h2 {
   border-radius: 0 6px 6px 0;
   font-size: 17px;
 }
+
 .passos li b { color: var(--vermelho); }
 
 .diferenciais {
   background: var(--asfalto);
   color: var(--branco);
 }
+
 .cartoes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
+
 .cartao {
   background: var(--asfalto-escuro);
   border-top: 4px solid var(--amarelo);
   padding: 22px;
   border-radius: 8px;
 }
+
 .cartao h3 { font-size: 19px; margin-bottom: 8px; }
 .cartao p  { color: #CFCFCF; font-size: 15px; }
 
 .contato { text-align: center; }
+
 .formulario {
   max-width: 460px;
   margin: 24px auto 0;
@@ -219,7 +230,9 @@ section h2 {
   gap: 12px;
   text-align: left;
 }
+
 .formulario label { font-weight: 700; font-size: 14px; }
+
 .formulario input,
 .formulario select {
   padding: 12px;
@@ -235,7 +248,9 @@ footer {
   text-align: center;
   padding: 40px 24px;
 }
+
 footer .logo { font-size: 24px; color: var(--branco); }
+
 footer .slogan {
   color: var(--amarelo);
   letter-spacing: 1px;
@@ -243,18 +258,6 @@ footer .slogan {
   margin: 10px 0;
 }
 
-@media (max-width: 720px) {
-  .btn-menu { display: block; }
-  nav {
-    display: none;
-    width: 100%;
-    margin-top: 12px;
-  }
-  nav.aberto { display: flex; flex-direction: column; }
-  nav a { margin: 8px 0; }
-  .header-interno { flex-wrap: wrap; }
-  .hero h1 { font-size: 32px; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .faixa-estrada { animation: none; }
