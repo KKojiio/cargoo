@@ -258,6 +258,19 @@ footer .slogan {
   margin: 10px 0;
 }
 
+@media (max-width: 720px) {
+  .btn-menu { display: block; } 
+  nav {
+    display: none;                
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  nav.aberto { display: flex; flex-direction: column; }
+  nav a { margin: 8px 0; }
+  .header-interno { flex-wrap: wrap; }
+  .hero h1 { font-size: 32px; }   
+}
 
 @media (prefers-reduced-motion: reduce) {
   .faixa-estrada { animation: none; }
